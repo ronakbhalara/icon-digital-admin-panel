@@ -47,7 +47,6 @@ const menuGroups = [
         ),
         label: "Dashboard",
         route: "/",
-        children: [{ label: "eCommerce", route: "/" }],
       },
       {
         icon: (
@@ -177,8 +176,8 @@ const menuGroups = [
             />
           </svg>
         ),
-        label: "Order Statistics",
-        route: "/orderStatistics",
+        label: "Gift Voucher",
+        route: "/giftVoucher",
       },
       // {
       //   icon: (
