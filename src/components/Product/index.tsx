@@ -140,8 +140,8 @@ const Products = () => {
             </div>
             <div className="grid grid-cols-5 gap-x-5 pt-3">
                 <div className="col-span-1 items-center gap-x-5 pb-6">
-                    <p className="text-[#000] col-span-1 font-medium text-base w-[130px]">Category :-</p>
-                    <div className="grid gap-3 mt-5 h-[80vh] overflow-auto">
+                    <p className="text-[#000] col-span-1 font-medium text-base block w-full border-b border-[#828282a3] pb-2">Category</p>
+                    <div className="grid gap-3 mt-5 h-[78vh] overflow-auto">
                         <p className="cursor-pointer text-[#000]">Laptop</p>
                         <p className="cursor-pointer text-[#000]">Laptop</p>
                         <p className="cursor-pointer text-[#000]">Laptop</p>
@@ -173,36 +173,53 @@ const Products = () => {
                     </div>
                 </div>
                 <div className="bg-white col-span-4 h-[80vh] overflow-auto flex flex-col gap-y-3">
-                    <div className="flex justify-around sticky top-0 bg-white w-full z-50">
-                        <p className="text-[#343333] font-medium mb-4">Product name</p>
-                        <p className="text-[#343333] font-medium mb-4">Price</p>
-                        <p className="text-[#343333] font-medium mb-4">Stock</p>
+                    <div className="flex justify-between border-b pb-2 border-[#828282a3] sticky top-0 bg-white w-full z-50">
+                        <p className="text-[#343333] font-bold">Laptop</p>
                     </div>
-                    {productData.map((item, i) => (
-                        <div className="p-3 flex items-center justify-around" key={i}>
-                            <div className="flex gap-9 items-center">
-                                <Image
-                                    src={item?.image}
-                                    alt="product image"
-                                    height={200}
-                                    width={200}
-                                    className="h-[100px] w-[100px] object-cover"
-                                />
-                                <p className="text-[#000] font-bold text-base w-[200px]">
-                                    {item?.name}
-                                </p>
-                            </div>
-                            <p className="text-[#292929] font-bold text-lg">
-                                ₹{item?.price}
-                            </p>
-                            <Switch />
-                            <div className="relative">
-                                <ActionModel
-                                    toggleEditForm={toggleEditForm}
-                                />
-                            </div>
-                        </div>
-                    ))}
+                    <table className="w-full">
+                        {/* Table Head */}
+                        <thead>
+                            <tr className="">
+                                <th className="p-3 text-left text-[#343333] font-medium">Product</th>
+                                <th className="p-3 text-left text-[#343333] font-medium">Price</th>
+                                <th className="p-3 text-left text-[#343333] font-medium">Stock</th>
+                            </tr>
+                        </thead>
+
+                        {/* Table Body */}
+                        <tbody>
+                            {productData.map((item, i) => (
+                                <tr key={i} className="">
+                                    {/* Product Column */}
+                                    <td className="p-3 flex items-center gap-4">
+                                        <Image
+                                            src={item?.image}
+                                            alt="product image"
+                                            height={100}
+                                            width={100}
+                                            className="h-[70px] w-[70px] object-cover"
+                                        />
+                                        <p className="text-[#000] font-bold text-base w-[200px]">{item?.name}</p>
+                                    </td>
+
+                                    {/* Price Column */}
+                                    <td className="p-3 text-[#292929] font-bold text-lg">
+                                        ₹{item?.price}
+                                    </td>
+
+                                    {/* Stock Column */}
+                                    <td className="p-3">
+                                        <Switch />
+                                    </td>
+
+                                    {/* Actions Column */}
+                                    <td className="p-3 relative">
+                                        <ActionModel toggleEditForm={toggleEditForm} />
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
             </div>
 

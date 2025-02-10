@@ -34,7 +34,7 @@ const ActionModel = ({ toggleEditForm }) => {
                     className="absolute top-3 z-40 p-4 -right-8 h-auto grid gap-y-3 w-[150px] bg-white shadow-lg"
                 >
                     <div className="flex items-center gap-x-3 cursor-pointer"
-                        onClick={toggleEditForm}
+                        onClick={toggleEditForm} 
                     >
                         <svg
                             stroke="currentColor"
