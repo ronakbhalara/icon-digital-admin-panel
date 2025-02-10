@@ -3,59 +3,39 @@ import Image from "next/image";
 import { Product } from "@/types/product";
 import SelectGroupOne from "../SelectGroup/SelectGroupOne";
 import { useState } from "react";
+import Switch from "../common/Switch/page";
+import ActionModel from "../common/ActionModel/page";
 
 const productData: Product[] = [
     {
         image: "/images/product/product-01.png",
         name: "Apple Watch Series 7",
-        productdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        category: "Electronics",
-        stock: 30,
         price: 296,
-        SalePrice: 400,
-        Brand: "HP",
-        Featured: "Lorem Ipsum",
-        Published: "21-01-2024",
-        Type: "S45",
     },
     {
-        image: "/images/product/product-02.png",
-        name: "Macbook Pro M1",
-        productdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        category: "Electronics",
-        price: 546,
-        stock: 30,
-        SalePrice: 400,
-        Brand: "HP",
-        Featured: "Lorem Ipsum",
-        Published: "21-01-2024",
-        Type: "S45",
+        image: "/images/product/product-01.png",
+        name: "Apple Watch Series 7",
+        price: 296,
     },
     {
-        image: "/images/product/product-03.png",
-        name: "Dell Inspiron 15",
-        productdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        category: "Electronics",
-        price: 443,
-        stock: 30,
-        SalePrice: 400,
-        Brand: "HP",
-        Featured: "Lorem Ipsum",
-        Published: "21-01-2024",
-        Type: "S45",
+        image: "/images/product/product-01.png",
+        name: "Apple Watch Series 7",
+        price: 296,
     },
     {
-        image: "/images/product/product-04.png",
-        name: "HP Probook 450",
-        productdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        category: "Electronics",
-        price: 499,
-        SalePrice: 400,
-        stock: 30,
-        Brand: "HP",
-        Featured: "Lorem Ipsum",
-        Published: "21-01-2024",
-        Type: "S45",
+        image: "/images/product/product-01.png",
+        name: "Apple Watch Series 7",
+        price: 296,
+    },
+    {
+        image: "/images/product/product-01.png",
+        name: "Apple Watch Series 7",
+        price: 296,
+    },
+    {
+        image: "/images/product/product-01.png",
+        name: "Apple Watch Series 7",
+        price: 296,
     },
 ];
 
@@ -143,86 +123,88 @@ const Products = () => {
     const toggleEditForm = () => {
         setEditForm(!editForm);
     };
+
+    // re-arrange field
+
     return (
-        <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark p-6">
-            <h4 className="text-xl font-semibold text-black dark:text-white mb-4">
-                All Products List
-            </h4>
-            <div className="grid grid-cols-9 overflow-auto items-center gap-x-5 py-6">
-                <p className="text-[#000] col-span-1 font-medium text-base w-[130px]">Category :-</p>
-                <div className="flex gap-x-10 col-span-8 items-center overflow-scroll w-full">
-                    <p className="cursor-pointer text-[#000]">Laptop</p>
-                    <p className="cursor-pointer text-[#000]">Laptop</p>
+        <div className="rounded-sm border h-[100vh] border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark p-6">
+            <div className="flex justify-between mb-4">
+                <h4 className="text-xl font-semibold text-black dark:text-white">
+                    All Products List
+                </h4>
+                <button className="p-2 px-7 bg-[#000] rounded-lg text-[#fff]"
+                    onClick={toggleAddForm}
+                >
+                    + Add New Product
+                </button>
+            </div>
+            <div className="grid grid-cols-5 gap-x-5 pt-3">
+                <div className="col-span-1 items-center gap-x-5 pb-6">
+                    <p className="text-[#000] col-span-1 font-medium text-base w-[130px]">Category :-</p>
+                    <div className="grid gap-3 mt-5 h-[80vh] overflow-auto">
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                        <p className="cursor-pointer text-[#000]">Laptop</p>
+                    </div>
+                </div>
+                <div className="bg-white col-span-4 h-[80vh] overflow-auto flex flex-col gap-y-3">
+                    <div className="flex justify-around sticky top-0 bg-white w-full z-50">
+                        <p className="text-[#343333] font-medium mb-4">Product name</p>
+                        <p className="text-[#343333] font-medium mb-4">Price</p>
+                        <p className="text-[#343333] font-medium mb-4">Stock</p>
+                    </div>
+                    {productData.map((item, i) => (
+                        <div className="p-3 flex items-center justify-around" key={i}>
+                            <div className="flex gap-9 items-center">
+                                <Image
+                                    src={item?.image}
+                                    alt="product image"
+                                    height={200}
+                                    width={200}
+                                    className="h-[100px] w-[100px] object-cover"
+                                />
+                                <p className="text-[#000] font-bold text-base w-[200px]">
+                                    {item?.name}
+                                </p>
+                            </div>
+                            <p className="text-[#292929] font-bold text-lg">
+                                ₹{item?.price}
+                            </p>
+                            <Switch />
+                            <div className="relative">
+                                <ActionModel
+                                    toggleEditForm={toggleEditForm}
+                                />
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
-            <table className="w-full border-collapse border border-stroke dark:border-strokedark">
-                <thead>
-                    <tr className="bg-gray-100 dark:bg-strokedark">
-                        <th className="border border-stroke dark:border-strokedark px-4 py-2">Name</th>
-                        <th className="border border-stroke dark:border-strokedark px-4 py-2">Description</th>
-                        <th className="border border-stroke dark:border-strokedark px-4 py-2">Category</th>
-                        <th className="border border-stroke dark:border-strokedark px-4 py-2">Stock</th>
-                        <th className="border border-stroke dark:border-strokedark px-4 py-2">Price</th>
-                        <th className="border border-stroke dark:border-strokedark px-4 py-2">Sale Price</th>
-                        <th className="border border-stroke dark:border-strokedark px-4 py-2">Brand</th>
-                        <th className="border border-stroke dark:border-strokedark px-4 py-2">Featured</th>
-                        <th className="border border-stroke dark:border-strokedark px-4 py-2">Published</th>
-                        <th className="border border-stroke dark:border-strokedark px-4 py-2">Type</th>
-                        <th className="border border-stroke dark:border-strokedark px-4 py-2">Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {productData.map((product, key) => (
-                        <tr key={key} className="hover:bg-gray-50 dark:hover:bg-strokedark">
-                            <td className="border border-stroke dark:border-strokedark px-4 py-2">
-                                {product.name}
-                            </td>
-                            <td className="border border-stroke dark:border-strokedark px-4 py-2">
-                                {product.productdesc}
-                            </td>
-                            <td className="border border-stroke dark:border-strokedark px-4 py-2">
-                                {product.category}
-                            </td>
-                            <td className="border border-stroke dark:border-strokedark px-4 py-2">
-                                {product.stock}
-                            </td>
-                            <td className="border border-stroke dark:border-strokedark px-4 py-2">
-                                ${product.price}
-                            </td>
-                            <td className="border border-stroke dark:border-strokedark px-4 py-2">
-                                ${product.SalePrice}
-                            </td>
-                            <td className="border border-stroke dark:border-strokedark px-4 py-2">
-                                {product.Brand}
-                            </td>
-                            <td className="border border-stroke dark:border-strokedark px-4 py-2">
-                                {product.Featured}
-                            </td>
-                            <td className="border border-stroke dark:border-strokedark px-2 py-2">
-                                {product.Published}
-                            </td>
-                            <td className="border border-stroke dark:border-strokedark px-4 py-2">
-                                {product.Type}
-                            </td>
-                            <td className="border space-y-5 border-stroke dark:border-strokedark px-4 py-2 text-center">
-                                <button
-                                    onClick={toggleAddForm}
-                                    className="mr-2 rounded bg-green-500 px-3 py-1 text-white hover:bg-green-600">
-                                    Add
-                                </button>
-                                <button
-                                    onClick={toggleEditForm}
-                                    className="mr-2 rounded bg-blue-500 px-3 py-1 text-white hover:bg-blue-600">
-                                    Edit
-                                </button>
-                                <button className="rounded bg-red-500 px-3 py-1 text-white hover:bg-red-600">
-                                    Delete
-                                </button>
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
 
             {/* Add Form */}
             <div className={`${addform ? "bg-[#0000007d] h-full transition-all duration-400 w-full absolute top-0 right-0 z-99" : ""}`}>
@@ -242,13 +224,18 @@ const Products = () => {
                     <form action="#">
                         <div className="p-6.5">
                             <div className="w-full mb-4.5">
-                                <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                                    Product Name
-                                </label>
+                                <div className="flex justify-between items-center">
+                                    <label className=" block text-sm font-medium text-black dark:text-white">
+                                        Product Name
+                                    </label>
+                                    <p className="text-lg cursor-pointer">
+                                        =
+                                    </p>
+                                </div>
                                 <input
                                     type="text"
                                     placeholder="Enter your product name"
-                                    className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                                    className="w-full mt-3 rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
                                 />
                             </div>
 
@@ -264,11 +251,16 @@ const Products = () => {
                             </div> */}
 
                             <div className="mb-4.5">
-                                <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                                    Product Category
-                                </label>
+                                <div className="flex justify-between items-center">
+                                    <label className=" block text-sm font-medium text-black dark:text-white">
+                                        Product Category
+                                    </label>
+                                    <p className="text-lg cursor-pointer">
+                                        =
+                                    </p>
+                                </div>
 
-                                <div className="relative w-full">
+                                <div className="relative w-full mt-3">
                                     <button
                                         onClick={() => setIsOpen(!isOpen)}
                                         className="w-full flex justify-between items-center rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -285,12 +277,13 @@ const Products = () => {
                                                 onClick={() => {
                                                     console.log("Open Modal or Input Field");
                                                     setIsOpen(false);
-                                                    handleOpenModal(true);
+                                                    handleOpenModal();
                                                 }}
                                                 className="w-full text-left px-4 py-2 bg-primary text-white hover:bg-primary-dark transition"
                                             >
                                                 + Add Custom Product Type
                                             </button>
+
                                             {/* Default Option */}
                                             <div
                                                 className="px-4 py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700"
@@ -302,30 +295,45 @@ const Products = () => {
                                                 Select Product Type
                                             </div>
 
-                                            {/* Dynamic Options */}
+                                            {/* Dynamic Options with Delete Button */}
                                             {category.map((item, i) => (
                                                 <div
                                                     key={i}
-                                                    className="px-4 py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700"
-                                                    onClick={() => {
+                                                    className="flex justify-between items-center px-4 py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700"
+                                                >
+                                                    <span onClick={() => {
                                                         setSelectedProduct(item);
                                                         setIsOpen(false);
-                                                    }}
-                                                >
-                                                    {item?.title}
+                                                    }}>
+                                                        {item?.title}
+                                                    </span>
+
+                                                    {/* Delete Button */}
+                                                    <button
+                                                        className="ml-2"
+                                                    >
+                                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M360 184h-8c4.4 0 8-3.6 8-8v8h304v-8c0 4.4 3.6 8 8 8h-8v72h72v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80h72v-72zm504 72H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zM731.3 840H292.7l-24.2-512h487l-24.2 512z"></path></svg>
+                                                    </button>
                                                 </div>
                                             ))}
                                         </div>
                                     )}
                                 </div>
+
                             </div>
 
                             <div className="w-full mb-4.5">
-                                <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                                    Product Media
-                                </label>
+                                <div className="flex justify-between items-center">
+                                    <label className=" block text-sm font-medium text-black dark:text-white">
+                                        Product Media
+                                    </label>
+                                    <p className="text-lg cursor-pointer">
+                                        =
+                                    </p>
+                                </div>
 
-                                <div className="flex flex-wrap gap-4">
+
+                                <div className="flex flex-wrap gap-4 mt-3">
                                     {/* Display selected images */}
                                     {images.map((imgSrc, index) => (
                                         <div key={index} className="relative h-[80px] w-[80px] rounded-md flex items-center justify-center border border-[#b9b9b9]">
@@ -353,11 +361,16 @@ const Products = () => {
                             </div>
 
                             <div className="mb-4.5">
-                                <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                                    Product Brand
-                                </label>
+                                <div className="flex justify-between items-center">
+                                    <label className=" block text-sm font-medium text-black dark:text-white">
+                                        Product Brand
+                                    </label>
+                                    <p className="text-lg cursor-pointer">
+                                        =
+                                    </p>
+                                </div>
 
-                                <div className="relative w-full">
+                                <div className="relative w-full mt-3">
                                     <button
                                         onClick={() => setIsOpen1(!isOpen)}
                                         className="w-full flex justify-between items-center rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -410,82 +423,128 @@ const Products = () => {
                             </div>
 
                             <div className="mb-4.5">
-                                <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                                    Price
-                                </label>
+                                <div className="flex justify-between items-center">
+                                    <label className=" block text-sm font-medium text-black dark:text-white">
+                                        Price
+                                    </label>
+                                    <p className="text-lg cursor-pointer">
+                                        =
+                                    </p>
+                                </div>
                                 <input
                                     type="text"
                                     placeholder="Enter your price"
-                                    className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                                    className="w-full mt-3 rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
                                 />
                             </div>
 
                             <div className="mb-4.5">
-                                <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                                    Discount Price
-                                </label>
+                                <div className="flex justify-between items-center">
+                                    <label className=" block text-sm font-medium text-black dark:text-white">
+                                        Discount Price
+                                    </label>
+                                    <p className="text-lg cursor-pointer">
+                                        =
+                                    </p>
+                                </div>
                                 <input
                                     type="text"
                                     placeholder="Enter your discount price"
-                                    className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                                    className="w-full mt-3 rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
                                 />
                             </div>
 
                             <div className="mb-4.5">
-                                <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                                    GST Number
-                                </label>
+                                <div className="flex justify-between items-center">
+                                    <label className=" block text-sm font-medium text-black dark:text-white">
+                                        HSN Code
+                                    </label>
+                                    <p className="text-lg cursor-pointer">
+                                        =
+                                    </p>
+                                </div>
                                 <input
                                     type="text"
-                                    placeholder="Enter your GST number"
-                                    className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                                    placeholder="Enter your HSN code"
+                                    className="w-full mt-3 rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                                />
+                            </div>
+
+                            <div className="mb-4.5">
+                                <div className="flex justify-between items-center">
+                                    <label className=" block text-sm font-medium text-black dark:text-white">
+                                        GST Rate
+                                    </label>
+                                    <p className="text-lg cursor-pointer">
+                                        =
+                                    </p>
+                                </div>
+                                <input
+                                    type="text"
+                                    placeholder="Enter your GST rate"
+                                    className="w-full mt-3 rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
                                 />
                             </div>
 
                             <div className="mb-6">
-                                <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                                    Description
-                                </label>
+                                <div className="flex justify-between items-center">
+                                    <label className=" block text-sm font-medium text-black dark:text-white">
+                                        Description
+                                    </label>
+                                    <p className="text-lg cursor-pointer">
+                                        =
+                                    </p>
+                                </div>
                                 <textarea
                                     rows={6}
                                     placeholder="Type your message"
-                                    className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                                    className="w-full mt-3 rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
                                 ></textarea>
                             </div>
 
-                            <div className="relative z-20 inline-block border border-stroke w-full">
-                                <select
-                                    name="#"
-                                    id="#"
-                                    className="relative z-20 inline-flex appearance-none bg-transparent py-3 pl-3 pr-8 w-full text-sm font-medium outline-none"
-                                >
-                                    <option value="" className="dark:bg-boxdark">
-                                        in stock
-                                    </option>
-                                    <option value="" className="dark:bg-boxdark">
-                                        Out of stock
-                                    </option>
-                                </select>
-                                <span className="absolute right-3 top-1/2 z-10 -translate-y-1/2">
-                                    <svg
-                                        width="10"
-                                        height="6"
-                                        viewBox="0 0 10 6"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
+                            <div>
+                                <div className="flex justify-between items-center">
+                                    <label className=" block text-sm font-medium text-black dark:text-white">
+                                        Stock
+                                    </label>
+                                    <p className="text-lg cursor-pointer">
+                                        =
+                                    </p>
+                                </div>
+                                <div className="relative mt-3 z-20 inline-block border border-stroke w-full">
+                                    <select
+                                        name="#"
+                                        id="#"
+                                        className="relative z-20 inline-flex appearance-none bg-transparent py-3 pl-3 pr-8 w-full text-sm font-medium outline-none"
                                     >
-                                        <path
-                                            d="M0.47072 1.08816C0.47072 1.02932 0.500141 0.955772 0.54427 0.911642C0.647241 0.808672 0.809051 0.808672 0.912022 0.896932L4.85431 4.60386C4.92785 4.67741 5.06025 4.67741 5.14851 4.60386L9.09079 0.896932C9.19376 0.793962 9.35557 0.808672 9.45854 0.911642C9.56151 1.01461 9.5468 1.17642 9.44383 1.27939L5.50155 4.98632C5.22206 5.23639 4.78076 5.23639 4.51598 4.98632L0.558981 1.27939C0.50014 1.22055 0.47072 1.16171 0.47072 1.08816Z"
-                                            fill="#637381"
-                                        />
-                                        <path
-                                            fillRule="evenodd"
-                                            clipRule="evenodd"
-                                            d="M1.22659 0.546578L5.00141 4.09604L8.76422 0.557869C9.08459 0.244537 9.54201 0.329403 9.79139 0.578788C10.112 0.899434 10.0277 1.36122 9.77668 1.61224L9.76644 1.62248L5.81552 5.33722C5.36257 5.74249 4.6445 5.7544 4.19352 5.32924C4.19327 5.32901 4.19377 5.32948 4.19352 5.32924L0.225953 1.61241C0.102762 1.48922 -4.20186e-08 1.31674 -3.20269e-08 1.08816C-2.40601e-08 0.905899 0.0780105 0.712197 0.211421 0.578787C0.494701 0.295506 0.935574 0.297138 1.21836 0.539529L1.22659 0.546578ZM4.51598 4.98632C4.78076 5.23639 5.22206 5.23639 5.50155 4.98632L9.44383 1.27939C9.5468 1.17642 9.56151 1.01461 9.45854 0.911642C9.35557 0.808672 9.19376 0.793962 9.09079 0.896932L5.14851 4.60386C5.06025 4.67741 4.92785 4.67741 4.85431 4.60386L0.912022 0.896932C0.809051 0.808672 0.647241 0.808672 0.54427 0.911642C0.500141 0.955772 0.47072 1.02932 0.47072 1.08816C0.47072 1.16171 0.50014 1.22055 0.558981 1.27939L4.51598 4.98632Z"
-                                            fill="#637381"
-                                        />
-                                    </svg>
-                                </span>
+                                        <option value="" className="dark:bg-boxdark">
+                                            in stock
+                                        </option>
+                                        <option value="" className="dark:bg-boxdark">
+                                            Out of stock
+                                        </option>
+                                    </select>
+                                    <span className="absolute right-3 top-1/2 z-10 -translate-y-1/2">
+                                        <svg
+                                            width="10"
+                                            height="6"
+                                            viewBox="0 0 10 6"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M0.47072 1.08816C0.47072 1.02932 0.500141 0.955772 0.54427 0.911642C0.647241 0.808672 0.809051 0.808672 0.912022 0.896932L4.85431 4.60386C4.92785 4.67741 5.06025 4.67741 5.14851 4.60386L9.09079 0.896932C9.19376 0.793962 9.35557 0.808672 9.45854 0.911642C9.56151 1.01461 9.5468 1.17642 9.44383 1.27939L5.50155 4.98632C5.22206 5.23639 4.78076 5.23639 4.51598 4.98632L0.558981 1.27939C0.50014 1.22055 0.47072 1.16171 0.47072 1.08816Z"
+                                                fill="#637381"
+                                            />
+                                            <path
+                                                fillRule="evenodd"
+                                                clipRule="evenodd"
+                                                d="M1.22659 0.546578L5.00141 4.09604L8.76422 0.557869C9.08459 0.244537 9.54201 0.329403 9.79139 0.578788C10.112 0.899434 10.0277 1.36122 9.77668 1.61224L9.76644 1.62248L5.81552 5.33722C5.36257 5.74249 4.6445 5.7544 4.19352 5.32924C4.19327 5.32901 4.19377 5.32948 4.19352 5.32924L0.225953 1.61241C0.102762 1.48922 -4.20186e-08 1.31674 -3.20269e-08 1.08816C-2.40601e-08 0.905899 0.0780105 0.712197 0.211421 0.578787C0.494701 0.295506 0.935574 0.297138 1.21836 0.539529L1.22659 0.546578ZM4.51598 4.98632C4.78076 5.23639 5.22206 5.23639 5.50155 4.98632L9.44383 1.27939C9.5468 1.17642 9.56151 1.01461 9.45854 0.911642C9.35557 0.808672 9.19376 0.793962 9.09079 0.896932L5.14851 4.60386C5.06025 4.67741 4.92785 4.67741 4.85431 4.60386L0.912022 0.896932C0.809051 0.808672 0.647241 0.808672 0.54427 0.911642C0.500141 0.955772 0.47072 1.02932 0.47072 1.08816C0.47072 1.16171 0.50014 1.22055 0.558981 1.27939L4.51598 4.98632Z"
+                                                fill="#637381"
+                                            />
+                                        </svg>
+                                    </span>
+                                </div>
                             </div>
 
                             <button className="flex w-full mt-10 justify-center rounded-md bg-primary p-3 font-medium text-gray hover:bg-opacity-90">
